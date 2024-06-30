@@ -1,0 +1,114 @@
+{
+  "config": "{\"version\":\"5.47\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.48\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSectionc11f91325ebc51be1a8a",
+      "config": "{}",
+      "name": "Pod",
+      "parameters": "[{\"name\":\"Param_Filterdd9122bc11e1a570bdc0\",\"boundFilter\":\"Filterdd9122bc11e1a570bdc0\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sales_24/05\"}},\"Property\":\"Sales rep\"}}},{\"name\":\"Param_Filter7d50f232c0581ed91957\",\"boundFilter\":\"Filter7d50f232c0581ed91957\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sales_24/05\"}},\"Property\":\"Amount incl\"}},\"asAggregation\":true}]",
+      "type": 2
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU08",
+            "path": "BaseThemes/CY23SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Sales by rep",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter624052e2b02e37407550\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sales_24/05\"}},\"Property\":\"Currency\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sales_24/05\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Currency\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'USD'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}},{\"name\":\"Filterfb3c10d35c77bb520d73\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sales_24/05\"}},\"Property\":\"Site\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"69a94936b6a2a4576dee\",\"layouts\":[{\"id\":0,\"position\":{\"x\":71.74041297935104,\"y\":0,\"z\":0,\"width\":1059.1150442477876,\"height\":690.9734513274336,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineStackedColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Sales 24/05.Sales rep\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Sales 24/05.Amount incl)\"}],\"Y2\":[{\"queryRef\":\"Sum(Sales 24/05.Amount excl)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sales_24/05\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sales rep\"},\"Name\":\"Sales 24/05.Sales rep\",\"NativeReferenceName\":\"Sales rep\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Amount incl\"}},\"Function\":0},\"Name\":\"Sum(Sales 24/05.Amount incl)\",\"NativeReferenceName\":\"Sum of Amount incl\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Amount excl\"}},\"Function\":0},\"Name\":\"Sum(Sales 24/05.Amount excl)\",\"NativeReferenceName\":\"Sum of Amount excl\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Amount incl\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"gridlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'dashed'\"}}},\"gridlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}],\"categoryAxis\":[{\"properties\":{\"innerPadding\":{\"expr\":{\"Literal\":{\"Value\":\"35L\"}}}}}],\"lineStyles\":[{\"properties\":{\"lineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'solid'\"}}},\"strokeLineJoin\":{\"expr\":{\"Literal\":{\"Value\":\"'round'\"}}}}}],\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Sales by Rep'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Heading2'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"27D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"visualHeader\":[{\"properties\":{\"border\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 690.97,
+          "width": 1059.11,
+          "x": 71.74,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Sales by currency",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection4088ab1f8dc391a395a0",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"88fb94fd90563b004a0b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.43952802359882,\"y\":0,\"z\":0,\"width\":1234.6902654867258,\"height\":692.8613569321534,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Sales 24/05.Currency\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Sales 24/05.Amount incl)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sales_24/05\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Currency\"},\"Name\":\"Sales 24/05.Currency\",\"NativeReferenceName\":\"Currency\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Amount incl\"}},\"Function\":0},\"Name\":\"Sum(Sales 24/05.Amount incl)\",\"NativeReferenceName\":\"Sum of Amount incl\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Amount incl\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'preferOutside'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Sales by Currency'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"27D\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 692.86,
+          "width": 1234.69,
+          "x": 9.44,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Sales by site",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionba82ab6512b3cae5696e",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"a9bc048d60a496bdc52a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.43952802359882,\"y\":0,\"z\":0,\"width\":1181.8289085545723,\"height\":666.4306784660768,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Sales 24/05.Site\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Sales 24/05.Amount incl)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sales_24/05\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Site\"},\"Name\":\"Sales 24/05.Site\",\"NativeReferenceName\":\"Site\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Amount incl\"}},\"Function\":0},\"Name\":\"Sum(Sales 24/05.Amount incl)\",\"NativeReferenceName\":\"Sum of Amount incl\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Amount incl\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"slices\":[{\"properties\":{\"innerRadiusRatio\":{\"expr\":{\"Literal\":{\"Value\":\"64L\"}}},\"startAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"labels\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'preferOutside'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Sales by site'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"27D\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"visualTooltip\":[{\"properties\":{\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Canvas'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 666.43,
+          "width": 1181.83,
+          "x": 9.44,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"type\":1}",
+      "displayName": "Reps",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filterdd9122bc11e1a570bdc0\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sales_24/05\"}},\"Property\":\"Sales rep\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filter7d50f232c0581ed91957\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sales_24/05\"}},\"Property\":\"Amount incl\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 240.00,
+      "name": "ReportSectionc11f91325ebc51be1a8a",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"7625364b6e81dd06a2be\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"width\":280,\"height\":220,\"z\":0,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Sales_24/05.Sales rep\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Sales_24/05.Amount incl)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sales_24/05\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sales rep\"},\"Name\":\"Sales_24/05.Sales rep\",\"NativeReferenceName\":\"Sales rep\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Amount incl\"}},\"Function\":0},\"Name\":\"Sum(Sales_24/05.Amount incl)\",\"NativeReferenceName\":\"Sum of Amount incl\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Amount incl\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Sales by rep'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 220.00,
+          "width": 280.00,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 320.00
+    }
+  ]
+}
